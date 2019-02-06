@@ -312,18 +312,70 @@ footer h1
      flex-wrap: wrap;
  }
 
- #tweet {
-     flex: 1;
+ #tweet, #mes_photos {
+     width: 50%;
  }
 
- #mes_photos{
-     flex: 1;
+ #mes_amis {
+     width: 50%;
+     margin-left: auto;
+     margin-right: auto;
  }
+}
+
+@media (max-width: 590px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+    }
 }
 
 
 /* Smartphones */
 
 @media (max-width: 300px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    #banniere_image {
+        padding-bottom: 40px;
+    }
+
+    #banniere_description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bouton_rouge {
+        position: static;
+        top: 20px;
+        padding: 5px 16px;
+        margin: 20px auto;
+    }
+
+    section {
+        flex-flow: column wrap;
+        padding-top: 40px;
+    }
+
+    #fleche_bulle {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #mes_amis {
+        width: 100%;
+    }
+
+    #listes_amis {
+        flex-flow: column wrap;
+    }
 }
